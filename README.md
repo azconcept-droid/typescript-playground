@@ -12,3 +12,20 @@
 - Typescript compiler
 - Nodemon module
 - Concurrent module
+
+## Getting started
+
+Install Node.js modules
+
+The nodemon module allows you to automatically restart the application when you change the JavaScript source code.
+
+The concurrently module runs multiple commands concurrently.
+
+First, execute the npm init command from the root directory of the project:
+
+npm init --yes
+
+Next, install the nodemon and concurrently module:
+
+npm install --g nodemon concurrently
+
