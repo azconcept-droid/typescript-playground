@@ -1,0 +1,15 @@
+{
+  "name": "finance-logger",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/app.js",
+    "start": "concurrently npm:start:*"
+  },
+  "author": "Yahaya Azeez",
+  "license": "ISC",
+  "description": ""
+}
+
+
