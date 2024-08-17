@@ -54,14 +54,24 @@ greeting = function (name: string) {
     return `Hi ${name}`;
 }
 
+// Basic type inference
 let counter = 0;
 
 function increment(counter: number) {
     return counter++;
 }
-
+// Best common type algorithm
 let items = [1, 2, 3, null];
 
 let itemz = [0, 1, null, 'Hi'];
 
 let arr = [new Date(), new RegExp('\d+')];
+
+// Contextual typing
+document.addEventListener('click', function (event) {
+    console.log(event.button);
+})
+
+document.addEventListener('scroll', function (event) {
+    console.log(event.button); // error
+})
