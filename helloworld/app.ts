@@ -195,3 +195,15 @@ console.log(doubleIt); // [ 2, 4, 6 ]
 // Storing values of mixed types
 let scores = ['Programming', 5, 'Software Design', 4]; 
 
+//////////////// Tuple ////////////
+// The order of values in a tuple is important. If you change the order of values
+// of the skill tuple to[5, "Programming"], you’ll get an error:
+let skillz: [string, number];
+skillz = ['Programming', 5];
+
+let color: [number, number, number] = [255, 0, 0];
+
+// Optional Tuple Elements using the question mark (?) postfix.
+let bgColor, headerColor: [number, number, number, number?];
+bgColor = [0, 255, 255, 0.5];
+headerColor = [0, 255, 255];
