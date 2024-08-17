@@ -31,3 +31,25 @@ showProduct(product.name, product.price)
 console.log(message);
 
 const heading1 = document.querySelector('h1');
+
+// Type annotation
+// Array
+let arrayName: string[] = ['hello', 'world'];
+
+// Objects
+let person: {
+    name: string,
+    age: number
+}
+
+person = {
+    name: 'john',
+    age: 25
+}
+
+// functions arguments and return types
+let greeting: (name: string) => string;
+
+greeting = function (name: string) {
+    return `Hi ${name}`;
+}
