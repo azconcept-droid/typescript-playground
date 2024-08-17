@@ -207,3 +207,59 @@ let color: [number, number, number] = [255, 0, 0];
 let bgColor, headerColor: [number, number, number, number?];
 bgColor = [0, 255, 255, 0.5];
 headerColor = [0, 255, 255];
+
+
+//////////////////////// ENUM ////////////////////////////
+enum Month {
+    Jan = 1,
+    Feb,
+    Mar,
+    Apr,
+    May,
+    Jun,
+    Jul,
+    Aug,
+    Sep,
+    Oct,
+    Nov,
+    Dec
+};
+
+function isItSummer(month: Month) {
+    let isSummer: boolean;
+    switch (month) {
+      case Month.Jun:
+      case Month.Jul:
+      case Month.Aug:
+        isSummer = true;
+        break;
+      default:
+        isSummer = false;
+        break;
+    }
+    return isSummer;
+}
+  
+console.log(isItSummer(Month.Jun)); // true
+
+//You should use an enum when you:
+// Have a small set of closely related fixed values.
+// And these values are known at compile time.
+// For example, you can use an enum for the approval status:
+enum ApprovalStatus {
+    draft,
+    submitted,
+    approved,
+    rejected
+};
+
+const request =  {
+    id: 1,
+    status: ApprovalStatus.approved,
+    description: 'Please approve this request'
+};
+
+if(request.status === ApprovalStatus.approved) {
+    // send an email
+    console.log('Send email to the Applicant...');
+}
