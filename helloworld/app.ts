@@ -140,5 +140,31 @@ let completeds = true;
 function changeStatus(status: boolean): boolean {
     //...
 }
- 
 
+///// Objects ///////////////////////////////////////////
+
+let employee: {
+    firstName: string;
+    lastName: string;
+    age: number;
+    jobTitle: string;
+};
+
+// let employee: object;
+
+employee = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 25,
+    jobTitle: 'Web Developer'
+};
+
+console.log(employee);
+
+// The empty type {}
+// let vacant: {};
+// vacant.firstName = 'John'; // error
+
+let vacant: {} = {};
+
+console.log(vacant.toString());
