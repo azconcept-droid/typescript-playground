@@ -279,3 +279,10 @@ let resort: any;
 resort = 10.123;
 console.log(resort.toFixed());
 resort.willExist(); // error on run time
+
+////// Void type /////////////////////////
+function log(message: string): void {
+    console.log(message);
+}
+
+
