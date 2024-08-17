@@ -345,25 +345,49 @@ type alphanumeric = string | number;
 
 let input: alphanumeric;
 input = 100; // valid
-input = 'Hi'; // valid
+input = "Hi"; // valid
 input = false; // Compiler error
 
 // Intersection Types under type aliases
 type Personal = {
-    name: string;
-    age: number;
-  };
-  
-  type Contact = {
-    email: string;
-    phone: string;
-  };
-  
-  type Candidate = Personal & Contact;
-  
-  let candidate: Candidate = {
-    name: "Joe",
-    age: 25,
-    email: "joe@example.com",
-    phone: "(408)-123-4567"
-  };
+	name: string;
+	age: number;
+};
+
+type Contact = {
+	email: string;
+	phone: string;
+};
+
+type Candidate = Personal & Contact;
+
+let candidate: Candidate = {
+	name: "Joe",
+	age: 25,
+	email: "joe@example.com",
+	phone: "(408)-123-4567",
+};
+
+/////////////////// String Literal Types////////////////
+let click: 'click';
+
+click = 'click'; // valid
+
+click = 'dblclick'; // compiler error
+
+let mouseEventz: 'click' | 'dblclick' | 'mouseup' | 'mousedown';
+mouseEventz = 'click'; // valid
+mouseEventz = 'dblclick'; // valid
+mouseEventz = 'mouseup'; // valid
+mouseEventz = 'mousedown'; // valid
+mouseEventz = 'mouseover'; // compiler error
+
+type MyMouseEvent = 'click' | 'dblclick' | 'mouseup' | 'mousedown';
+let mouseEvent: MyMouseEvent;
+mouseEvent = 'click'; // valid
+mouseEvent = 'dblclick'; // valid
+mouseEvent = 'mouseup'; // valid
+mouseEvent = 'mousedown'; // valid
+mouseEvent = 'mouseover'; // compiler error
+
+let anotherEvent: MyMouseEvent;
