@@ -75,3 +75,23 @@ document.addEventListener('click', function (event) {
 document.addEventListener('scroll', function (event) {
     console.log(event.button); // error
 })
+
+// Number Annotations
+
+let counterS: number = 0;
+let x: number = 100, 
+    y: number = 200;
+
+let bin = 0b100;
+let anotherBin: number = 0B010;
+
+// Octal Numbers
+let octal: number = 0o10;
+
+// Hexadecimal numbers
+let hexadecimal: number = 0XA;
+
+//Big Integers
+// represent the whole numbers larger than 2^253 – 1
+
+let big: bigint = 9007199254740991n;
