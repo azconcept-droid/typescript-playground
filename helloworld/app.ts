@@ -111,3 +111,34 @@ lines
 `;
 
 console.log(description);
+
+////////////// Boolean ////////////////////
+let pending: boolean;
+pending = true;
+// after a while
+// ..
+pending = false;
+
+// NOT operator
+const pending: boolean = true;
+const notPending = !pending; // false
+console.log(result); // false
+
+const hasError: boolean = false;
+const completed: boolean = true;
+
+// AND operator
+let result = completed && hasError; 
+console.log(result); // false
+
+// OR operator
+result = completed || hasError; 
+console.log(result); // true
+
+let completeds = true;
+
+function changeStatus(status: boolean): boolean {
+    //...
+}
+ 
+
