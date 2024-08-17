@@ -95,3 +95,19 @@ let hexadecimal: number = 0XA;
 // represent the whole numbers larger than 2^253 – 1
 
 let big: bigint = 9007199254740991n;
+
+////////////////////////////STRINGS///////////////////////////////
+
+let firstName: string = `John`;
+let title: string = `Web Developer`;
+let profile: string = `I'm ${firstName}. 
+I'm a ${title}`;
+
+console.log(profile);
+
+let description = `This TypeScript string can 
+span multiple 
+lines
+`;
+
+console.log(description);
