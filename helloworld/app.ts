@@ -263,3 +263,19 @@ if(request.status === ApprovalStatus.approved) {
     // send an email
     console.log('Send email to the Applicant...');
 }
+
+//////////////////////////// ANY ////////////////////
+// when you migrate a JavaScript project over to a TypeScript project.
+// And the unknown value may come from a third-party API or user input.
+
+// json may come from a third-party API
+const json = `{"latitude": 10.11, "longitude":12.12}`;
+
+// parse JSON to find location
+const currentLocation = JSON.parse(json);
+console.log(currentLocation);
+
+let resort: any;
+resort = 10.123;
+console.log(resort.toFixed());
+resort.willExist(); // error on run time
