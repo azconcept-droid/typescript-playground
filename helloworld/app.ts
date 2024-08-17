@@ -285,4 +285,27 @@ function log(message: string): void {
     console.log(message);
 }
 
+//////////// NEVER TYPE //////////////
+function fn(a: string | number): boolean {
+    if (typeof a === "string") {
+      return true;
+    } else if (typeof a === "number") {
+      return false;
+    }
+    throw new Error('invalid type')
+}
 
+
+// OR
+function raiseError(msg: string): never {
+    throw new Error(msg);
+  }
+  
+  function fnc(a: string | number): boolean {
+    if (typeof a === 'string') {
+      return true;
+    } else if (typeof a === 'number') {
+      return false;
+    }
+    return raiseError('Invalid type');
+  }
