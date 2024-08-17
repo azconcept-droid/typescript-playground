@@ -137,9 +137,9 @@ console.log(result); // true
 
 let completeds = true;
 
-function changeStatus(status: boolean): boolean {
-    //...
-}
+// function changeStatus(status: boolean): boolean {
+//     //...
+// }
 
 ///// Objects ///////////////////////////////////////////
 
@@ -168,3 +168,30 @@ console.log(employee);
 let vacant: {} = {};
 
 console.log(vacant.toString());
+////////////////////////////////// ARRAY /////////////////////
+let skills: string[] = [];
+skills[0] = "Problem Solving";
+skills[1] = "Programming";
+skills.push('Software Design');
+
+// INFER
+// let skills = ['Problem Sovling','Software Design','Programming'];
+
+// skills.push(100); error
+
+let skill = skills[0];
+console.log(typeof (skill)); // string
+
+// TypeScript array properties and methods
+
+let series = [1, 2, 3];
+console.log(series.length); // 3
+
+// And you can use all the useful array methods such as 
+// forEach(), map(), reduce(), and filter().For example:
+let doubleIt = series.map(e => e* 2);
+console.log(doubleIt); // [ 2, 4, 6 ]
+
+// Storing values of mixed types
+let scores = ['Programming', 5, 'Software Design', 4]; 
+
