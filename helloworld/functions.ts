@@ -94,10 +94,10 @@ function combine(...args: (number | string)[]): [number, string] {
   console.log({ str });
 
 //////////////// Overloaded Function ////////////////
-function add(a: number, b: number): number;
-function add(a: string, b: string): string;
+// function add(a: number, b: number): number;
+// function add(a: string, b: string): string;
 
-function add(a: any, b: any): any {
+function adding(a: any, b: any): any {
     if (typeof a === 'number' && typeof b === 'number') {
         return a + b;
     } else if (typeof a === 'string' && typeof b === 'string') {
@@ -106,8 +106,8 @@ function add(a: any, b: any): any {
     throw new Error('Invalid arguments');
 }
 
-console.log(add(10, 20));  // 30
-console.log(add('Hello, ', 'world!'));  // 'Hello, world!
+console.log(adding(10, 20));  // 30
+console.log(adding('Hello, ', 'world!'));  // 'Hello, world!
 
 class Counter {
     private current = 0;
