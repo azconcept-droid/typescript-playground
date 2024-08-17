@@ -53,3 +53,15 @@ let greeting: (name: string) => string;
 greeting = function (name: string) {
     return `Hi ${name}`;
 }
+
+let counter = 0;
+
+function increment(counter: number) {
+    return counter++;
+}
+
+let items = [1, 2, 3, null];
+
+let itemz = [0, 1, null, 'Hi'];
+
+let arr = [new Date(), new RegExp('\d+')];

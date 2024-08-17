@@ -17,3 +17,25 @@ var showProduct = function (name, price) {
 var product = getProduct(1);
 showProduct(product.name, product.price);
 console.log(message);
+var heading1 = document.querySelector('h1');
+// Type annotation
+// Array
+var arrayName = ['hello', 'world'];
+// Objects
+var person;
+person = {
+    name: 'john',
+    age: 25
+};
+// functions arguments and return types
+var greeting;
+greeting = function (name) {
+    return "Hi ".concat(name);
+};
+var counter = 0;
+function increment(counter) {
+    return counter++;
+}
+var items = [1, 2, 3, null];
+var itemz = [0, 1, null, 'Hi'];
+var arr = [new Date(), new RegExp('\d+')];
